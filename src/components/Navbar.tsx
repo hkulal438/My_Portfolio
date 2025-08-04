@@ -46,28 +46,28 @@ const Navbar = () => {
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
-          {/* Mobile Menu Button - Moved to LEFT side */}
-          <div className="md:hidden flex-shrink-0 order-1">
+          {/* Mobile Menu Button - Clean minimal design */}
+          <div className="md:hidden">
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="p-3 rounded-lg text-gray-900 hover:text-blue-600 hover:bg-blue-100 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 bg-white shadow-lg border-2 border-gray-300 hover:border-blue-400"
+              className="p-2 text-gray-800 hover:text-blue-600 transition-colors duration-300 focus:outline-none"
               aria-label="Toggle mobile menu"
             >
               {isMobileMenuOpen ? (
-                <X size={28} className="transition-transform duration-200 stroke-2" />
+                <X size={24} className="transition-transform duration-200" />
               ) : (
-                <Menu size={28} className="transition-transform duration-200 stroke-2" />
+                <Menu size={24} className="transition-transform duration-200" />
               )}
             </button>
           </div>
 
-          {/* Logo - Centered on mobile */}
-          <div className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent flex-shrink-0 order-2 md:order-1">
+          {/* Logo - Centered */}
+          <div className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
             Hrithika Kulal
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex space-x-8 order-3">
+          <div className="hidden md:flex space-x-8">
             {navItems.map((item) => (
               <button
                 key={item.name}
@@ -80,8 +80,8 @@ const Navbar = () => {
             ))}
           </div>
 
-          {/* Empty space on mobile to balance layout */}
-          <div className="md:hidden flex-shrink-0 order-3 w-14"></div>
+          {/* Empty space on mobile for balance */}
+          <div className="md:hidden w-8"></div>
         </div>
 
         {/* Mobile Navigation Menu */}
