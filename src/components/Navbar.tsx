@@ -26,13 +26,13 @@ const Navbar = () => {
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled 
-        ? 'bg-white/90 backdrop-blur-md shadow-lg' 
+      isScrolled
+        ? 'bg-white/90 backdrop-blur-md shadow-lg'
         : 'bg-transparent'
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center py-4">
-          <div className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+        <div className="flex justify-between items-center py-4 w-full">
+          <div className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent truncate max-w-[180px]">
             Hrithika Kulal
           </div>
 
@@ -68,7 +68,7 @@ const Navbar = () => {
 
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
-          <div className="md:hidden bg-white/95 backdrop-blur-md rounded-lg shadow-lg mt-2 py-4">
+          <div className="md:hidden absolute top-full left-0 w-full bg-white/95 backdrop-blur-md z-50 shadow-lg py-4">
             {navItems.map((item) => (
               <Link
                 key={item.name}
